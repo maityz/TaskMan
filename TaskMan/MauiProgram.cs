@@ -1,4 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using TaskMan.Interfaces;
+using TaskMan.Services;
+using TaskMan.ViewModels;
+using TaskMan.Views;
 
 namespace TaskMan
 {
@@ -18,7 +22,11 @@ namespace TaskMan
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddTransient<ISqliteService, SqliteService>();
+            builder.Services.AddTransient<MainPageViewModel>();
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<AddPageViewModel>();
+            builder.Services.AddTransient<AddPage>();
             return builder.Build();
         }
     }
