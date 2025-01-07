@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskMan.MainPage">
+
+    <StackLayout>
+        <Label Text="Task Manager"/>
+        <Grid>
+            <CollectionView ItemsSource="{Binding Tasks}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="{models:}"
+                    
+                </CollectionView.ItemTemplate>
+            </CollectionView>   
+        </Grid>
+        <Button>
+
+    </StackLayout>
+       
+
+</ContentPage>
